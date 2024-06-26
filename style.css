@@ -1,0 +1,25 @@
+
+body{
+    background-color: red;
+}
+
+h1{
+    color: pink
+}
+
+table{
+    margin: auto;
+    width: 50%;
+    border: 3px solid yellow;
+    padding: 10px;
+    color:aqua;
+    background-color: rgb(55, 21, 87);
+}
+
+#list{
+    background-color: rgb(2, 59, 2);
+}
+
+th,td{
+    padding: 13 px;
+}

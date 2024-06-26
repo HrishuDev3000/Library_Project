@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library Project</title>
-  </head>
-  <body>
-    <main
-      style="
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main style="
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-      "
-    >
-      <div>
-        <h1>Library Project</h1>
-        <div id="library">
-          <!-- Add table here -->
-          <table id="table" style="min-width: 680px; margin: 2rem">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Read</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Name of the Wind</td>
-                <td>Patrick Rothfuss</td>
-                <td>
-                  <input
-                    type="checkbox"
-                    name="read"
-                    id="readLibraryCheckbox"
-                    checked
-                    disabled
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </main>
+      ">
+    <div>
+      <h1>Library Project</h1>
+      <div id="library">
+        <!-- Form to add new book -->
+        <form id="bookForm">
+          <label>Title: <input type="text" id="title" required></label>
+          <label>Author: <input type="text" id="author" required></label>
+          <label>Read: <input type="checkbox" id="bookCheck"></label>
+          <button type="submit" id="submit">Submit New Book</button>
+        </form>
 
-    <script src="app.js"></script>
-  </body>
+        <!-- Table to display books -->
+        <table id="list" style="min-width: 680px; margin: 2rem">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Read</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example book entries -->
+            <tr>
+              <td>Captain Underpants</td>
+              <td>Dave Pilkey</td>
+              <td><input type="checkbox" checked disabled /></td>
+            </tr>
+            <tr>
+              <td>Unabomber's Manifesto</td>
+              <td>Ted Kaczynski</td>
+              <td><input type="checkbox" checked disabled /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
